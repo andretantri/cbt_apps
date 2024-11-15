@@ -56,7 +56,7 @@ Aplikasi **CBT** (Computer-Based Test) dikembangkan untuk memudahkan pelaksanaan
 
 1. **Clone Repository**: 
     ```bash
-    git clone https://github.com/username/cbt.git
+    git clone https://github.com/andretantri/cbt.git
     ```
 2. **Masuk ke Direktori Proyek**:
     ```bash
@@ -64,25 +64,12 @@ Aplikasi **CBT** (Computer-Based Test) dikembangkan untuk memudahkan pelaksanaan
     ```
 3. **Install Dependencies**:
     ```bash
-    npm install
+    php artisan serve
     ```
 4. **Jalankan Aplikasi**:
     ```bash
-    npm start
+    localhost:8000
     ```
-
----
-
-## 📱 Tampilan Aplikasi
-<img src="screenshot1.png" alt="Tampilan Aplikasi" width="600px">
-<img src="screenshot2.png" alt="Tampilan Ujian" width="600px">
-
----
-
-## 📧 Kontak Pengembang
-- **Nama**: Tim Pengembang CBT
-- **Email**: cbt@example.com
-- **Website**: [cbt.example.com](http://cbt.example.com)
 
 ---
 
