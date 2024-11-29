@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\Admin\LoginController as loginAdminController;
+use App\Http\Controllers\Admin\AdminController as AdminController;
 
 Route::get('/', function () {
     return view('welcome');
