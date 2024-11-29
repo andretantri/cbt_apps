@@ -2,7 +2,7 @@
     <div class="content py-0">
         <div class="row fs-sm">
             <div class="col-sm-12 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
-            &copy; <span data-toggle="year-copy"></span>
+                By Kelompok 7 &copy; <span data-toggle="year-copy"></span>
             </div>
         </div>
     </div>

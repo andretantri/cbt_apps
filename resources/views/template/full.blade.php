@@ -18,7 +18,7 @@
                             <span class="opacity-75">x</span>
                         </span>
                         <span class="smini-hidden">
-                            CBT<span class="opacity-75"></span>
+                            CBT<span class="opacity-75">TES</span>
                         </span>
                     </a>
                     <!-- END Logo -->
@@ -58,7 +58,7 @@
             <div class="js-sidebar-scroll">
                 <!-- Side Navigation -->
                 <div class="content-side">
-                    @if (Auth::guard('admin')->check())
+                    @if(Auth::guard('admin')->check())
                         @include('template.menu-admin')
                     @elseif(Auth::guard('operator')->check())
                         @include('template.menu-operator')
@@ -95,7 +95,8 @@
                         <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-fw fa-user d-sm-none"></i>
-                            <span class="d-none d-sm-inline-block">{{ ucwords(strtolower(Auth::user()->name)) }}</span>
+                            <span
+                                class="d-none d-sm-inline-block">{{ ucwords(strtolower(Auth::user()->name)) }}</span>
                             <i class="fa fa-fw fa-angle-down opacity-50 ms-1 d-none d-sm-inline-block"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
@@ -107,23 +108,20 @@
                                     <i class="far fa-fw fa-user me-1"></i> Profile
                                 </a> --}}
                                 <div role="separator" class="dropdown-divider"></div>
-                                <a class="dropdown-item"
-                                    href="@if (Auth::guard('admin')->check()) {{ route('admin.logout') }}
-                    @elseif(Auth::guard('operator')->check())
+                                <a class="dropdown-item" href="@if (Auth::guard('admin')->check()) {{ route('admin.logout') }}
+@elseif(Auth::guard('operator')->check())
                         {{ route('operator.logout') }}
-                    @else
-                        {{ route('user.logout') }} @endif"
-                                    onclick="event.preventDefault();
+@else
+                        {{ route('user.logout') }} @endif" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                                    <i class="far fa-fw fa-arrow-alt-circle-left me-1"></i> {{ __('Sign Out') }}
+                                    <i class="far fa-fw fa-arrow-alt-circle-left me-1"></i>
+                                    {{ __('Sign Out') }}
                                 </a>
-                                <form id="logout-form"
-                                    action="@if (Auth::guard('admin')->check()) {{ route('admin.logout') }}
-                    @elseif(Auth::guard('operator')->check())
+                                <form id="logout-form" action="@if (Auth::guard('admin')->check()) {{ route('admin.logout') }}
+@elseif(Auth::guard('operator')->check())
                         {{ route('operator.logout') }}
-                    @else
-                        {{ route('user.logout') }} @endif"
-                                    method="POST" style="display: none;">
+@else
+                        {{ route('user.logout') }} @endif" method="POST" style="display: none;">
                                     @csrf
                                 </form>
                             </div>
